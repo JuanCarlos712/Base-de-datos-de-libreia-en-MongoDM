@@ -1,0 +1,39 @@
+db.Rol.insertOne({
+isRol: ObjectId(),
+nombreRol: "Administrador"
+})
+
+db.Membresia.insertOne({
+    _id: ObjectId(),
+    status: true,
+    costo: 100.0
+})
+
+db.Usuario.insertOne({
+    _id: ObjectId(),
+    nombre: "Juan Carlos",
+    correo: "juancarlossantiagi917@gmail.com",
+    contraseña: "Jc551844",
+		id_rol: ObjectId("673615a588343c2278039a98"),
+		id_membresia: ObjectId("6736165c88343c2278039a99")
+})
+
+db.Categoria.insertOne({
+idCategoria: ObjectId(),
+nombreCategorial: "Infantiles"
+})
+
+db.Genero.insertOne({
+isGenero: ObjectId(),
+nombreGenero: "Ficción"
+})
+
+db.Libro.insertOne({
+isbn: "JCSA020602",
+titulo: "El principito",
+tipo: "Físico",
+autor: "Desconocido",
+status: 1,
+genero: ObjectId("67361ecc88343c2278039a9e"),
+categoria: ObjectId("67361d9b88343c2278039a9c")
+})
